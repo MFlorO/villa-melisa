@@ -28,7 +28,7 @@ const GridServices = () => {
                 <GridItem
                     key={index}
                     w={{base:"280px", sm:"350px"}}
-                    h={{base:"180px", sm:"250px"}}
+                    h={{base:"180px", sm:"200px"}}
                     p={4}
                     bgColor="white"
                     boxShadow="md"

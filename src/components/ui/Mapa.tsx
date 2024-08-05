@@ -1,11 +1,13 @@
 "use client"
-
-import { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 import L, { LatLngTuple } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Configuración del ícono predeterminado para los marcadores
+const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), { ssr: false });
+const TileLayer = dynamic(() => import('react-leaflet').then((mod) => mod.TileLayer), { ssr: false });
+const Marker = dynamic(() => import('react-leaflet').then((mod) => mod.Marker), { ssr: false });
+const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), { ssr: false });
+
 const defaultIcon = new L.Icon({
   iconUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png',
   iconRetinaUrl: 'https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon-2x.png',
@@ -16,36 +18,16 @@ const defaultIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
-// Dinámicamente importa el componente react-leaflet
-const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), {
-  ssr: false,
-});
-const TileLayer = dynamic(() => import('react-leaflet').then((mod) => mod.TileLayer), {
-  ssr: false,
-});
-const Marker = dynamic(() => import('react-leaflet').then((mod) => mod.Marker), {
-  ssr: false,
-});
-const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), {
-  ssr: false,
-});
-
 const Mapa = () => {
-
-  const position: LatLngTuple = [-31.474501, -64.525025];
   
-  const [isClient, setIsClient] = useState(false);
+  const position: LatLngTuple = [-31.474501, -64.525025];
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
+  if (typeof window === 'undefined') {
     return null;
   }
-
+  
   return (
-    <MapContainer center={position} zoom={13} style={{ display: 'flex', height: '400px', width: '70%' }}>
+    <MapContainer center={position} zoom={13} style={{ height: '400px', width: '70%' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

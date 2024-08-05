@@ -3,10 +3,6 @@ import { Flex, Text } from "@chakra-ui/react";
 
 const FormContact = () => {
 
-    if (typeof window === 'undefined') {
-        return null;
-    }
-
   return (
     <Flex w='100%' h='100vh' id="form-contact">
         <Flex w='100%' h='100%' direction={{base:'column', sm:'row'}}>
@@ -20,7 +16,7 @@ const FormContact = () => {
                 </Text>
             </Flex>
             <Flex w={{base:'100%', sm:'50%'}} h='100%' bgImage='/portada.jpg' bgSize='cover' bgRepeat='no-repeat' justifyContent='center' alignItems='center'>
-                <Mapa />
+                {typeof window !== 'undefined' && <Mapa />}
             </Flex>
         </Flex>
     </Flex>

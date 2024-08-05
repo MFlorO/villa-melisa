@@ -20,20 +20,18 @@ const Portadas = () => {
   }, []);
   
     return (
-      <Flex position='relative' w='100%' h='100vh' direction='column' overflow='hidden' id="portada-section">
+      <Flex position='relative' w='100%' h='100vh' direction='column' overflow='hidden' alignItems='center' justifyContent='center' id="portada-section">
 
         <Flex position='absolute' w='100%' h='100%' bgSize='cover' bgPos='center' bgAttachment='fixed' bgRepeat='no-repeat'
           transform='translateZ(0)'
           style={{ backgroundImage: "url('/portada.jpg')", backgroundPositionY: `${scrollY * 0.7}px` }}
         />
 
-        <Flex h='100%' position='relative' alignItems='center' justifyContent='center' color='white' opacity={50}>
-          <Text>Bienvenido</Text>
+        <Flex w='100%' position='relative' direction='column' alignItems='center' justifyContent='center' color='white' gap={4}>
+          <Text fontSize='90px' fontWeight='bold'>Bienvenido</Text>
+          <Text fontSize='50px' fontWeight='bold'>Cabañas Villa Melisa</Text>
         </Flex>
-  
-        <Flex position='absolute' justifyContent='center' color='white' left='50vw' top='50vh'>
-          <Text>Explora</Text>
-        </Flex>
+
       </Flex>
     );
 };
