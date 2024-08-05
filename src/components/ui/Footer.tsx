@@ -8,7 +8,7 @@ const Footer = () => {
         <Flex alignItems='center'>Cabañas Villa Melisa -</Flex>
         <Flex alignItems='center'>Cabo Garcia nº 66 - </Flex>
         <Flex alignItems='center'>Playas de Oro III - </Flex>
-        <Flex alignItems='center'><ImWhatsapp size='15px' styles={{ px:'5px' }} /> 3516624922 -</Flex>
+        <Flex alignItems='center'><ImWhatsapp size='15px' style={{ padding:'0 5px 0 5px' }} /> 3516624922 -</Flex>
         <Flex alignItems='center'>contacto@villamelisa.com.ar </Flex>
       </Flex>
     </Flex>

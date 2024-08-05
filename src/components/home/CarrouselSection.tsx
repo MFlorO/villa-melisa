@@ -16,7 +16,7 @@ const CarrouselSection = () => {
   const breakpoint = useBreakpointValue({ base: 'base', md: 'md', lg: 'lg', xl: 'xl' });
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const movies = [
+  const cabañas = [
     { title: 'Justice League', image: '/foto1.jpg', description: 'Descripción de Justice League' },
     { title: 'Guardians of the Galaxy', image: '/foto2.jpg', description: 'Descripción de Guardians of the Galaxy' },
     { title: 'Spider-Man', image: '/foto3.jpg', description: 'Descripción de Spider-Man' },
@@ -58,36 +58,36 @@ const CarrouselSection = () => {
         >
         {
           breakpoint === 'md' || breakpoint === 'lg' || breakpoint === 'xl'  
-          ? movies.map((movie, index) => (
+          ? cabañas.map((cabaña, index) => (
               <SwiperSlide key={index} style={{ display:'flex', width: '600px', height:'500px', justifyContent:'center', alignItems:'center'}}>
                 <Flex w='100%' h='100%' position='relative'>
                   <Flex position='absolute' w='100%' h='100%' zIndex={9}
                   bgColor={index === activeIndex ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.3)"} // Fondo más oscuro para imágenes no activas  
                   />
-                  <Flex w='100%' h='100%' bgImage={movie.image} bgSize='cover' bgRepeat='no-repeat' boxShadow={index === activeIndex ? '0 10px 10px rgba(0,0,0,0.2)' : 'none'}>
+                  <Flex w='100%' h='100%' bgImage={cabaña.image} bgSize='cover' bgRepeat='no-repeat' boxShadow={index === activeIndex ? '0 10px 10px rgba(0,0,0,0.2)' : 'none'}>
                     <Flex w='100%' h='100%' position='relative' direction='column'>
                       {index === activeIndex && <Flex position='absolute' w='30%' h='100%' bg="rgba(255, 255, 255, 0.1)"  backdropFilter="blur(5px)"/>}
                       <Flex w='100%' h='100%' direction='column' justifyContent='end' p='0 0 30px 30px' color='white' gap={2} zIndex={8}>
-                        <Flex>{movie.title}</Flex>
-                        <Flex>{movie.description}</Flex>
+                        <Flex>{cabaña.title}</Flex>
+                        <Flex>{cabaña.description}</Flex>
                       </Flex>
                     </Flex>
                   </Flex>
                 </Flex>
               </SwiperSlide>
             ))
-          : movies.map((movie, index) => (
+          : cabañas.map((cabaña, index) => (
             <SwiperSlide key={index} style={{ display:'flex', width: '300px', height:'400px', justifyContent:'center', alignItems:'center'}}>
               <Flex w='100%' h='100%' position='relative'>
                 <Flex position='absolute' w='100%' h='100%' zIndex={9}
                 bgColor={index === activeIndex ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.3)"} // Fondo más oscuro para imágenes no activas  
                 />
-                <Flex w='100%' h='100%' bgImage={movie.image} bgSize='cover' bgRepeat='no-repeat' boxShadow={index === activeIndex ? '0 10px 10px rgba(0,0,0,0.2)' : 'none'}>
+                <Flex w='100%' h='100%' bgImage={cabaña.image} bgSize='cover' bgRepeat='no-repeat' boxShadow={index === activeIndex ? '0 10px 10px rgba(0,0,0,0.2)' : 'none'}>
                   <Flex w='100%' h='100%' position='relative' direction='column'>
                     {index === activeIndex && <Flex position='absolute' w='30%' h='100%' bg="rgba(255, 255, 255, 0.1)"  backdropFilter="blur(5px)"/>}
                     <Flex w='100%' h='100%' direction='column' justifyContent='end' p='0 0 30px 30px' color='white' gap={2} zIndex={8}>
-                      <Flex>{movie.title}</Flex>
-                      <Flex>{movie.description}</Flex>
+                      <Flex>{cabaña.title}</Flex>
+                      <Flex>{cabaña.description}</Flex>
                     </Flex>
                   </Flex>
                 </Flex>
