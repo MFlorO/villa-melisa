@@ -14,6 +14,12 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+
+  if (typeof window === 'undefined') {
+    // Este código se ejecuta en el servidor, puedes retornar algo específico o null
+    return null;
+  }
+  
   return (
     <html lang="en">
       <body className={inter.className}>
