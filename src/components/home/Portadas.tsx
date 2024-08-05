@@ -28,8 +28,8 @@ const Portadas = () => {
         />
 
         <Flex w='100%' position='relative' direction='column' alignItems='center' justifyContent='center' color='white' gap={4}>
-          <Text fontSize='90px' fontWeight='bold'>Bienvenido</Text>
-          <Text fontSize='50px' fontWeight='bold'>Cabañas Villa Melisa</Text>
+          <Text fontSize={{base:'50px', sm:'90px'}} fontWeight='bold'>Bienvenido</Text>
+          <Text fontSize={{base:'30px', sm:'50px'}} fontWeight='bold'>Cabañas Villa Melisa</Text>
         </Flex>
 
       </Flex>

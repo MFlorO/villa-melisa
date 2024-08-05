@@ -1,4 +1,4 @@
-import { Portadas, SecondSections, GridServices, ThirdSections, FourSections } from "@/components/home";
+import { Portadas, SecondSections, GridServices, CarrouselSection, FourSections } from "@/components/home";
 import { Flex } from "@chakra-ui/react";
 
 export default function Home() {
@@ -7,7 +7,7 @@ export default function Home() {
       <Portadas />
       <SecondSections />
       <GridServices />
-      <ThirdSections />
+      <CarrouselSection />
       <FourSections />
     </Flex>
   );

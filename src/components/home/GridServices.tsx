@@ -7,11 +7,11 @@ import { BiSolidLandscape } from "react-icons/bi";
 
 const GridServices = () => {
   return (
-    <Flex w='100%' h={{base:'max-content', sm:'100vh'}} direction='column' bgColor='#FED8B1' justifyContent='space-between' alignItems='center' p='4% 6%' gap={6} id="grid">
+    <Flex w='100%' h={{base:'max-content', sm:'100vh'}} direction='column' bgColor='#FED8B1' justifyContent='space-around' alignItems='center' p='4% 6%' gap={6} id="grid">
         
         <Flex w='100%' direction='column' justifyContent={{base:'center', sm:'start'}} alignItems='center' gap={1}>
             <Text fontSize='14px' color='#6F4E37' fontWeight='normal'>Explora</Text>
-            <Text fontSize='18px' color='#6F4E37' fontWeight='bold'>Nuestros Servicios</Text>
+            <Text fontSize='20px' color='#6F4E37' fontWeight='bold'>Nuestros Servicios</Text>
             <Text fontSize='16px' color='#6F4E37' fontStyle='italic' textAlign={{base:'center', sm:'start'}}>Estos son algunos de los servicios que ofrecemos para que tu estadía sea inolvidable.</Text>
         </Flex>
 
@@ -25,24 +25,15 @@ const GridServices = () => {
                 { icon: BiSolidLandscape, text: 'Vista a las montañas', description: 'Despierta con vistas espectaculares a las montañas.' }
 
             ].map((service, index) => (
-                <GridItem
-                    key={index}
-                    w={{base:"280px", sm:"350px"}}
-                    h={{base:"180px", sm:"200px"}}
-                    p={4}
-                    bgColor="white"
-                    boxShadow="md"
-                    borderRadius="md"
-                    border="1px solid"
-                    borderColor="#ECB176"
+                <GridItem key={index} w={{base:"280px", sm:"350px"}} h={{base:"max-content", sm:"220px"}} p={4} bgColor="white" boxShadow="md" 
+                    borderRadius="md" border="1px solid" borderColor="#ECB176" transition="transform 0.4s ease" // Aplicar la misma transición al salir del hover
                     _hover={{
                         transform: "scale(1.05)",
                         transition: "transform 0.4s ease", // Cambiado a 'ease' para una transición más suave
                     }}
-                    transition="transform 0.4s ease" // Aplicar la misma transición al salir del hover
                 >
                     <Flex direction="column" justifyContent="space-around" h="100%" p='3%' gap={4}>
-                        <service.icon size={55} color="#F88800" />
+                        <Flex w='45px' h='45px'><service.icon size='100%' color="#F88800" /></Flex>
                         <Text fontSize="20px" color="#6F4E37" fontWeight='bold'>{service.text}</Text>
                         <Text fontSize="13px" color="#6F4E37" fontStyle="italic">{service.description}</Text>
                         <Link href="/servicios">
