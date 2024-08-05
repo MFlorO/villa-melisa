@@ -2,7 +2,7 @@ import { Flex } from "@chakra-ui/react"
 
 const FourSections = () => {
   return (
-    <Flex w='100%' h={{base:'40vh', sm:'70vh'}} bgColor='rgba(248,136,0,0.5)' id="section4">
+    <Flex w='100%' h={{base:'30vh', sm:'50vh'}} bgColor='#FED8B1' id="section4">
         
     </Flex>
   )

@@ -1,8 +1,9 @@
 "use client"
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import L from 'leaflet';
+
+import { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
+import L, { LatLngTuple } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import { LatLngTuple } from 'leaflet';
 
 // Configuración del ícono predeterminado para los marcadores
 const defaultIcon = new L.Icon({
@@ -15,13 +16,36 @@ const defaultIcon = new L.Icon({
   shadowSize: [41, 41],
 });
 
+// Dinámicamente importa el componente react-leaflet
+const MapContainer = dynamic(() => import('react-leaflet').then((mod) => mod.MapContainer), {
+  ssr: false,
+});
+const TileLayer = dynamic(() => import('react-leaflet').then((mod) => mod.TileLayer), {
+  ssr: false,
+});
+const Marker = dynamic(() => import('react-leaflet').then((mod) => mod.Marker), {
+  ssr: false,
+});
+const Popup = dynamic(() => import('react-leaflet').then((mod) => mod.Popup), {
+  ssr: false,
+});
+
 const Mapa = () => {
 
-  // Coordenadas de la ubicación
-  const position:LatLngTuple = [-31.474501,-64.525025];
+  const position: LatLngTuple = [-31.474501, -64.525025];
+  
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return null;
+  }
 
   return (
-    <MapContainer center={position} zoom={13} style={{ display:'flex', height: '400px', width: '70%' }}>
+    <MapContainer center={position} zoom={13} style={{ display: 'flex', height: '400px', width: '70%' }}>
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -36,4 +60,3 @@ const Mapa = () => {
 };
 
 export default Mapa;
-

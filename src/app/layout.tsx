@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "@/components/providers";
-import { Navbar, FormContact, Whatsapp } from "@/components/ui";
+import { Navbar, FormContact, Whatsapp, Footer } from "@/components/ui";
 import "@/styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,6 +22,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             {children}
           <Whatsapp/>
           <FormContact />
+          <Footer />
         </Providers>
       </body>
     </html>

@@ -1,5 +1,4 @@
 "use client"
-import { useRouter } from 'next/navigation';
 import { useState } from "react";
 import { Flex } from "@chakra-ui/react";
 
@@ -14,15 +13,14 @@ import 'swiper/css/effect-coverflow';
 
 const ThirdSections = () => {
 
-  const router = useRouter()
   const [activeIndex, setActiveIndex] = useState(0);
 
   const movies = [
-    { title: 'Justice League', image: '/portada.jpg', description: 'Descripción de Justice League' },
-    { title: 'Guardians of the Galaxy', image: '/portada.jpg', description: 'Descripción de Guardians of the Galaxy' },
-    { title: 'Spider-Man', image: '/portada.jpg', description: 'Descripción de Spider-Man' },
-    { title: 'Justice League', image: '/portada.jpg', description: 'Descripción de Justice League' },
-    { title: 'Guardians of the Galaxy', image: '/portada.jpg', description: 'Descripción de Guardians of the Galaxy' },
+    { title: 'Justice League', image: '/foto1.jpg', description: 'Descripción de Justice League' },
+    { title: 'Guardians of the Galaxy', image: '/foto2.jpg', description: 'Descripción de Guardians of the Galaxy' },
+    { title: 'Spider-Man', image: '/foto3.jpg', description: 'Descripción de Spider-Man' },
+    { title: 'Justice League', image: '/foto4.jpg', description: 'Descripción de Justice League' },
+    { title: 'Guardians of the Galaxy', image: '/foto5.jpg', description: 'Descripción de Guardians of the Galaxy' },
     { title: 'Spider-Man', image: '/portada.jpg', description: 'Descripción de Spider-Man' },
   ];
 
@@ -31,7 +29,7 @@ const ThirdSections = () => {
   };
 
   return (
-    <Flex w='100%' h='100vh' bgColor='white' justifyContent='center' alignItems='center' p='6% 0%' id="section3">
+    <Flex w='100%' h='100vh' justifyContent='center' alignItems='center' p='6% 0%' bgColor='#fdeddd6e' id="carrousel-section">
       <Swiper
         modules={[Autoplay, Pagination, EffectCoverflow]}
         spaceBetween={30}

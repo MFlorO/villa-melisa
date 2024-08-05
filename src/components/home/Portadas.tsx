@@ -9,20 +9,18 @@ const Portadas = () => {
 
   useEffect(() => {
     
-    if(typeof window !== undefined){
-      const handleScroll = () => {
-        setScrollY(window.scrollY);
-      };
-  
-      window.addEventListener('scroll', handleScroll);
-      return () => {
-        window.removeEventListener('scroll', handleScroll);
-      };
-    }
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
   
     return (
-      <Flex position='relative' w='100%' h='100vh' direction='column' overflow='hidden' id="section1">
+      <Flex position='relative' w='100%' h='100vh' direction='column' overflow='hidden' id="portada-section">
 
         <Flex position='absolute' w='100%' h='100%' bgSize='cover' bgPos='center' bgAttachment='fixed' bgRepeat='no-repeat'
           transform='translateZ(0)'

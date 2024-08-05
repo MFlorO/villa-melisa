@@ -4,7 +4,6 @@ import { Flex, Text } from "@chakra-ui/react";
 const FormContact = () => {
 
     if (typeof window === 'undefined') {
-        // Este código se ejecuta en el servidor, puedes retornar algo específico o null
         return null;
     }
 
