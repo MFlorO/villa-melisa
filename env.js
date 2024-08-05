@@ -1,0 +1,1 @@
+export const NEXT_NUMERO_DE_WHATSAPP = process.env.NEXT_NUMERO_DE_WHATSAPP
