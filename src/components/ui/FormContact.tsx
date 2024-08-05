@@ -2,6 +2,12 @@ import Mapa from "./Mapa";
 import { Flex, Text } from "@chakra-ui/react";
 
 const FormContact = () => {
+
+    if (typeof window === 'undefined') {
+        // Este código se ejecuta en el servidor, puedes retornar algo específico o null
+        return null;
+    }
+
   return (
     <Flex w='100%' h='100vh' id="form-contact">
         <Flex w='100%' h='100%' direction={{base:'column', sm:'row'}}>
