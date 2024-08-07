@@ -40,34 +40,34 @@ const SecondSections = () => {
   }, []);
 
   return (
-    <Flex w='100%' h={{base:'80vh', sm:'100vh'}} p={{base:'0%', sm:'9%'}} bgColor='#fdeddd6e' transition='background-color 0.5s ease-out' justifyContent={{base:'center', sm:'start'}} alignItems='center' ref={sectionRef} id="section2">
+    <Flex w='100%' h={{base:'80vh', sm:'100vh'}} p={{base:'0%', sm:'9%'}} bgColor='bgColor2' transition='background-color 0.5s ease-out' justifyContent={{base:'center', sm:'start'}} alignItems='center' ref={sectionRef} id="section2">
       <Flex position='relative' w='100%' h='100%' direction={{base:'column', sm:'row'}} p={{base:'4%',sm:'0%'}}  alignItems={{base:'center', sm:'start'}} justifyContent={{base:'center', sm:'start'}}>
-        {
-          breakpoint === 'md' || breakpoint === 'lg' || breakpoint === 'xl'  
-          ?<>      
-          <Flex w={{base:'100%', sm:'50%'}} h={{base:'max-content', sm:'100%'}} className={isVisible ? 'animate-second-section-left' : ''}> 
-            <Flex width={{base:'100%', md:'650px'}} h={{base:'200px', md:'450px'}} bgImage='/portada.jpg' bgSize='cover' bgRepeat='no-repeat'/>
+      {
+        breakpoint === 'md' || breakpoint === 'lg' || breakpoint === 'xl'  
+        ?<>      
+        <Flex w={{base:'100%', sm:'50%'}} h={{base:'max-content', sm:'100%'}} className={isVisible ? 'animate-second-section-left' : ''}> 
+          <Flex width={{base:'100%', md:'650px'}} h={{base:'200px', md:'450px'}} bgImage='/portada.jpg' bgSize='cover' bgRepeat='no-repeat'/>
+        </Flex>
+        <Flex position={{base:'relative', sm:'absolute'}} w='100%' h={{base:'max-content', sm:'100%'}} justifyContent='end' alignItems='center' zIndex={100}>
+          <Flex w={{base:'100%', sm:'55%'}} h='70%' bgColor='white' p='4%' direction='column' justifyContent='center' gap={2} className={isVisible ? 'animate-second-section-right' : ''}>
+            <Text fontSize='18px' fontWeight='bold' color='highlight'>UBICACIÓN</Text>
+            <Text fontSize='15px'>Las Cabañas Villa Melisa se encuentran ubicadas a pocos kilómetros de la ciudad de Villa Carlos Paz, en la pintoresca localidad de San Antonio de Arredondo, departamento de Punilla, sobre la Ruta Provincial Nº 14.</Text>
+            <Text fontSize='15px'>A solo media cuadra del Río San Antonio, la región se caracteriza por sus playas de aguas cristalinas, reflejando la naturaleza viva en un área de contacto entre la montaña y la llanura.</Text>
           </Flex>
-          <Flex position={{base:'relative', sm:'absolute'}} w='100%' h={{base:'max-content', sm:'100%'}} justifyContent='end' alignItems='center' zIndex={100}>
-            <Flex w={{base:'100%', sm:'55%'}} h='70%' bgColor='white' p='4%' direction='column' justifyContent='center' gap={2} className={isVisible ? 'animate-second-section-right' : ''}>
-              <Text fontSize='18px' fontWeight='bold' color='#6F4E37'>UBICACIÓN</Text>
-              <Text fontSize='15px'>Las Cabañas Villa Melisa se encuentran ubicadas a pocos kilómetros de la ciudad de Villa Carlos Paz, en la pintoresca localidad de San Antonio de Arredondo, departamento de Punilla, sobre la Ruta Provincial Nº 14.</Text>
-              <Text fontSize='15px'>A solo media cuadra del Río San Antonio, la región se caracteriza por sus playas de aguas cristalinas, reflejando la naturaleza viva en un área de contacto entre la montaña y la llanura.</Text>
-            </Flex>
-          </Flex>
-        </> 
-        : <>
-          <Flex w='100%' h='max-content'> 
-            <Flex width='100%' h='250px' bgImage='/portada.jpg' bgSize='cover' bgRepeat='no-repeat'/>
-          </Flex>
-          <Flex position='relative' w='100%' h='max-content' justifyContent='end' alignItems='center' zIndex={100}>
-            <Flex w='100%' h='100%' bgColor='white' p='4%' direction='column' justifyContent='center' gap={2}>
-              <Text fontSize='18px' fontWeight='bold' color='#6F4E37'>UBICACIÓN</Text>
-              <Text fontSize='16px'>Las Cabañas Villa Melisa se encuentran ubicadas a pocos kilómetros de la ciudad de Villa Carlos Paz, en la pintoresca localidad de San Antonio de Arredondo, departamento de Punilla, sobre la Ruta Provincial Nº 14.</Text>
-              <Text fontSize='16px'>A solo media cuadra del Río San Antonio, la región se caracteriza por sus playas de aguas cristalinas, reflejando la naturaleza viva en un área de contacto entre la montaña y la llanura.</Text>            </Flex>
-          </Flex>
-        </> 
-        }
+        </Flex>
+      </> 
+      : <>
+        <Flex w='100%' h='max-content'> 
+          <Flex width='100%' h='250px' bgImage='/portada.jpg' bgSize='cover' bgRepeat='no-repeat'/>
+        </Flex>
+        <Flex position='relative' w='100%' h='max-content' justifyContent='end' alignItems='center' zIndex={100}>
+          <Flex w='100%' h='100%' bgColor='white' p='4%' direction='column' justifyContent='center' gap={2}>
+            <Text fontSize='18px' fontWeight='bold' color='highlight'>UBICACIÓN</Text>
+            <Text fontSize='16px'>Las Cabañas Villa Melisa se encuentran ubicadas a pocos kilómetros de la ciudad de Villa Carlos Paz, en la pintoresca localidad de San Antonio de Arredondo, departamento de Punilla, sobre la Ruta Provincial Nº 14.</Text>
+            <Text fontSize='16px'>A solo media cuadra del Río San Antonio, la región se caracteriza por sus playas de aguas cristalinas, reflejando la naturaleza viva en un área de contacto entre la montaña y la llanura.</Text>            </Flex>
+        </Flex>
+      </> 
+      }
       </Flex>
     </Flex>
   );

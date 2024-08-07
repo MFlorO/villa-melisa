@@ -1,5 +1,6 @@
 "use client"
 import { useState } from "react";
+import { Title } from "../ui";
 import { Flex, useBreakpointValue } from "@chakra-ui/react";
 
 // Import Swiper React components
@@ -10,6 +11,7 @@ import { Pagination, Autoplay, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-coverflow';
+
 
 const CarrouselSection = () => {
 
@@ -25,27 +27,17 @@ const CarrouselSection = () => {
     { title: 'Spider-Man', image: '/portada.jpg', description: 'Descripción de Spider-Man' },
   ];
 
-  const handleSlideChange = (swiper: any) => {
-    setActiveIndex(swiper.realIndex); // Actualiza el índice activo al cambiar la diapositiva
-  };
+  const handleSlideChange = (swiper: any) => setActiveIndex(swiper.realIndex)
 
   return (
-    <Flex w='100%' h={{base:'60vh', sm:'100vh'}} direction='column' justifyContent='space-between' alignItems='center' p='4% 0%' bgColor='#fdeddd6e' gap={{base:2, sm:0}} id="carrousel-section">
+    <Flex w='100%' h={{base:'60vh', sm:'100vh'}} direction='column' justifyContent='space-between' alignItems='center' p='4% 0%' bgColor='bgColor2' gap={{base:2, sm:0}} id="carrousel-section">
       
-      <Flex w='95%' fontSize={{base:'18px', sm:'20px'}} color='#6F4E37' fontWeight='bold' justifyContent='center' textAlign='center'>Explore nuestras cabañas y las vistas espectaculares que las rodean.</Flex>
-      
+      <Title title='Explore nuestras cabañas y las vistas espectaculares que las rodean'/>
+
       <Flex w='100%' h='max-content' justifyContent='center' alignItems='center'>
         <Swiper
-          modules={[Autoplay, Pagination, EffectCoverflow]}
-          spaceBetween={30}
-          slidesPerView={'auto'}
-          centeredSlides={true}
-          pagination={{ clickable: true }}
-          autoplay={{ delay: 2500, disableOnInteraction: false }}
-          loop={true} // Hacer que el carrusel sea infinito
-          navigation
-          effect={'coverflow'}
-          grabCursor={true}
+          modules={[Autoplay, Pagination, EffectCoverflow]} effect={'coverflow'} grabCursor={true} onSlideChange={handleSlideChange}
+          spaceBetween={30} slidesPerView={'auto'} centeredSlides={true} navigation pagination={{ clickable: true }} autoplay={{ delay: 2500, disableOnInteraction: false }} loop={true} 
           coverflowEffect={{
             rotate: 0, // Mantén esto en 0 para que las tarjetas estén rectas
             stretch: -10, // Ajusta esto para controlar la superposición. Un valor negativo las acercará
@@ -54,7 +46,6 @@ const CarrouselSection = () => {
             slideShadows: false, // Opcional: desactiva las sombras para un efecto más limpio
           }}
           style={{ height:'100%', display:'flex', justifyContent:'center', alignItems:'center'}} // Ajusta el padding según lo necesites
-          onSlideChange={handleSlideChange} // Escucha el evento de cambio de diapositiva
         >
         {
           breakpoint === 'md' || breakpoint === 'lg' || breakpoint === 'xl'  
@@ -62,7 +53,7 @@ const CarrouselSection = () => {
               <SwiperSlide key={index} style={{ display:'flex', width: '600px', height:'500px', justifyContent:'center', alignItems:'center'}}>
                 <Flex w='100%' h='100%' position='relative'>
                   <Flex position='absolute' w='100%' h='100%' zIndex={9}
-                  bgColor={index === activeIndex ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.3)"} // Fondo más oscuro para imágenes no activas  
+                  bgColor={index === activeIndex ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.3)"}
                   />
                   <Flex w='100%' h='100%' bgImage={cabaña.image} bgSize='cover' bgRepeat='no-repeat' boxShadow={index === activeIndex ? '0 10px 10px rgba(0,0,0,0.2)' : 'none'}>
                     <Flex w='100%' h='100%' position='relative' direction='column'>
@@ -80,7 +71,7 @@ const CarrouselSection = () => {
             <SwiperSlide key={index} style={{ display:'flex', width: '300px', height:'400px', justifyContent:'center', alignItems:'center'}}>
               <Flex w='100%' h='100%' position='relative'>
                 <Flex position='absolute' w='100%' h='100%' zIndex={9}
-                bgColor={index === activeIndex ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.3)"} // Fondo más oscuro para imágenes no activas  
+                bgColor={index === activeIndex ? "rgba(0,0,0,0)" : "rgba(0,0,0,0.3)"}
                 />
                 <Flex w='100%' h='100%' bgImage={cabaña.image} bgSize='cover' bgRepeat='no-repeat' boxShadow={index === activeIndex ? '0 10px 10px rgba(0,0,0,0.2)' : 'none'}>
                   <Flex w='100%' h='100%' position='relative' direction='column'>

@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Roboto } from "next/font/google";
 import { Providers } from "@/components/providers";
 import { Navbar, FormContact, Whatsapp, Footer } from "@/components/ui";
+import { Flex } from "@chakra-ui/react"
 import "@/styles/globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: ['300','400','500','700'],
+  style: ['normal', 'italic'],
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: "Cabañas Villa Melisa",
@@ -16,13 +22,15 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <Providers>
-          <Navbar />
-            {children}
-          <Whatsapp/>
-          <FormContact />
-          <Footer />
+          <Flex w='100%' h='max-content' minH='100vh' direction='column'>
+            <Navbar />
+              {children}
+            <Whatsapp/>
+            <FormContact />
+            <Footer />
+          </Flex>
         </Providers>
       </body>
     </html>
