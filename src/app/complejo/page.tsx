@@ -1,6 +1,6 @@
 "use client"
 import Link from 'next/link'
-import { HEIGHT_NAVBAR, PADDING_BASE_WEB, PADDING_MD_WEB } from '@/constants';
+import { HEIGHT_NAVBAR_BASE, HEIGHT_NAVBAR_SM, PADDING_WEB_SM, PADDING_WEB_BASE } from '@/constants';
 import { Flex, Text, Grid, GridItem } from "@chakra-ui/react";
 
 // Import Swiper React components
@@ -14,7 +14,7 @@ import 'swiper/css/pagination';
 
 export default function Cabañas() {
   return (
-    <Flex w='100%' direction='column' minH='100vh' h='max-content' alignItems='center' mt={HEIGHT_NAVBAR} px={{base:PADDING_BASE_WEB, md:PADDING_MD_WEB}}>
+    <Flex w='100%' direction='column' minH='100vh' h='max-content' alignItems='center' mt={{base:HEIGHT_NAVBAR_BASE, sm:HEIGHT_NAVBAR_SM}} px={{base:PADDING_WEB_BASE, md:PADDING_WEB_SM}}>
 
       <Flex w='100%' direction='column' color='black'>
         <Text>Cabañas</Text>

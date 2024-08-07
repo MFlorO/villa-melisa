@@ -1,6 +1,6 @@
 "use client"
 import { useEffect, useRef, useState } from 'react';
-import { Flex, Text, useBreakpointValue  } from "@chakra-ui/react";
+import { Flex, Text, useBreakpointValue } from "@chakra-ui/react";
 
 
 const SecondSections = () => {

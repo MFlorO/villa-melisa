@@ -30,7 +30,7 @@ const CarrouselSection = () => {
   const handleSlideChange = (swiper: any) => setActiveIndex(swiper.realIndex)
 
   return (
-    <Flex w='100%' h={{base:'60vh', sm:'100vh'}} direction='column' justifyContent='space-between' alignItems='center' p='4% 0%' bgColor='bgColor2' gap={{base:2, sm:0}} id="carrousel-section">
+    <Flex w='100%' h={{base:'70vh', sm:'100vh'}} direction='column' justifyContent='space-between' alignItems='center' p='4% 0%' bgColor='bgColor2' gap={{base:2, sm:0}} id="carrousel-section">
       
       <Title title='Explore nuestras cabañas y las vistas espectaculares que las rodean'/>
 
@@ -95,7 +95,7 @@ const CarrouselSection = () => {
           margin-top: 100px !important;
         }
         .swiper-pagination-bullet-active {
-          background-color: #F88800 !important;
+          background-color: #7A2D2C !important;
         }
       `}
       </style>
