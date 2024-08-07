@@ -31,10 +31,10 @@ export default function Cabañas() {
             <Swiper modules={[Pagination]} spaceBetween={1} centeredSlides={true} pagination={{ clickable: true }} navigation grabCursor={true}
               style={{ width:'100%', height:'60%', display:'flex', justifyContent:'center', alignItems:'center'}}
             >
-              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgrounRepeat:'no-repeat'}}/>
-              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgrounRepeat:'no-repeat'}}/>
-              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgrounRepeat:'no-repeat'}}/>
-              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgrounRepeat:'no-repeat'}}/>
+              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}/>
+              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}/>
+              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}/>
+              <SwiperSlide style={{ display:'flex', width: '100%', height:'100%', justifyContent:'center', alignItems:'center',  backgroundImage: "url('/portada.jpg')", backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat'}}/>
             </Swiper>
           
             <Flex w='100%' h='40%' direction="column" justifyContent="space-around" p='3%' gap={4}>
