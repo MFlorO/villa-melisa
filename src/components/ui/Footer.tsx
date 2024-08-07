@@ -19,7 +19,7 @@ const Footer = () => {
           <Flex alignItems='center' gap={2} fontWeight={500}><Text>Emial: </Text><Text color='highlight'>contacto@villamelisa.com.ar</Text></Flex>
         </Flex>
 
-        { pathname !== '/ubicacion' && <Flex w='49%' justifyContent='center'>{typeof window !== 'undefined' && <Mapa />}</Flex>}
+        {/* { pathname !== '/ubicacion' && <Flex w='49%' justifyContent='center'>{typeof window !== 'undefined' && <Mapa />}</Flex>} */}
       </Flex> 
 
       <Flex w='100%' h={{base:'45px', sm:'60px'}} bgColor='highlight' color='text' justifyContent='center' alignItems='center' p='30px' fontSize={{base:'12px', sm:'14px'}} direction={{base:'column', sm:'row'}} gap={1}>

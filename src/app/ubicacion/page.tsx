@@ -9,7 +9,7 @@ export default function Ubicacion() {
         <Title title='UBICACIÓN' />
         <Text textAlign='center'>Estamos ubicacions en a pocos kilómetros de la ciudad de Villa Carlos Paz, en la pintoresca localidad de San Antonio de Arredondo, departamento de Punilla, sobre la Ruta Provincial Nº 14.</Text>
       </Flex>
-      {typeof window !== 'undefined' && <Flex w='100%' h='500px'> <Mapa /></Flex>}
+      {/* {typeof window !== 'undefined' && <Flex w='100%' h='500px'><Mapa /></Flex>} */}
     </Flex>
   );
 }
