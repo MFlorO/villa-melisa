@@ -43,4 +43,5 @@ El proyecto estará disponible en [http://localhost:3000](http://localhost:3000)
 
 
 ## Colaboradores
-Este proyecto esta creado por MFlorO pero desplegado en Vercel por villa-melisa
+Este proyecto esta creado por MFlorO pero desplegado en Vercel por villa-melisa. 
+El repositorio esta forkeado por lo que cada cambio que se realiza desde el repositorio original de MFlorO hay que sincronizarlo.
