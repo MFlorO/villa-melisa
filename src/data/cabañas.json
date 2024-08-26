@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "nombre": "Cabaña para 6 personas",
+        "descripcion": "Cabaña para 6 personas de dos pisos con dos habitaciones y dos baños",
+        "caracteristicas":[
+            { 
+                "titulo": "Cochera",
+                "descripcion": "Para 1 auto"
+            },
+            {
+                "titulo": "Asador",
+                "descripcion": "Privado"
+            },
+            {
+                "titulo": "Pileta",
+                "descripcion": "Calefaccionada solar"
+            },
+            {
+                "titulo": "Tv",
+                "descripcion": "Smart/DirecTV"
+            },
+            {
+                "titulo": "Aireación",
+                "descripcion": "Ventiladores y aireacondicionado con ficha"
+            },
+            {
+                "titulo": "Calefacción",
+                "descripcion": "Calefactores"
+            },
+            {
+                "titulo": "Pet Friendly",
+                "descripcion": "Mascotas pequeñas"
+            }
+        ],
+        "images": [
+                    "/cabaña6personas2plantas/0.jpg","/cabaña6personas2plantas/1.jpg", "/cabaña6personas2plantas/2.jpg", "/cabaña6personas2plantas/3.jpg", 
+                    "/cabaña6personas2plantas/4.jpg", "/cabaña6personas2plantas/5.jpg", "/cabaña6personas2plantas/6.jpg",
+                    "/cabaña6personas2plantas/7.jpg", "/cabaña6personas2plantas/8.jpg", "/cabaña6personas2plantas/9.jpg"
+                  ]
+    },
+    {
+        "id": 2,
+        "nombre": "Cabaña para 6 personas",
+        "descripcion": "Cabaña para 6 personas de una planta con dos habitaciones y dos baños",
+        "caracteristicas":[
+            { 
+                "titulo": "Cochera",
+                "descripcion": "Para 1 auto"
+            },
+            {
+                "titulo": "Asador",
+                "descripcion": "Privado"
+            },
+            {
+                "titulo": "Pileta",
+                "descripcion": "Calefaccionada solar"
+            },
+            {
+                "titulo": "Tv",
+                "descripcion": "Smart/DirecTV"
+            },
+            {
+                "titulo": "Aireación",
+                "descripcion": "Ventiladores y aireacondicionado con ficha"
+            },
+            {
+                "titulo": "Calefacción",
+                "descripcion": "Calefactores"
+            },
+            {
+                "titulo": "Pet Friendly",
+                "descripcion": "Mascotas pequeñas"
+            }
+        ],
+        "images": [
+            "/cabañapara6personas1planta/0.jpg","/cabañapara6personas1planta/1.jpg", "/cabañapara6personas1planta/2.jpg", "/cabañapara6personas1planta/3.jpg", 
+            "/cabañapara6personas1planta/4.jpg", "/cabañapara6personas1planta/5.jpg"
+          ]
+    },
+    {
+        "id": 3,
+        "nombre": "Cabaña para 4 personas",
+        "descripcion": "Cabaña para 4 personas de una planta con 1 habitaciones, un sillon cama y un baño",
+        "caracteristicas":[
+            { 
+                "titulo": "Cochera",
+                "descripcion": "Para 1 auto"
+            },
+            {
+                "titulo": "Asador",
+                "descripcion": "Privado"
+            },
+            {
+                "titulo": "Pileta",
+                "descripcion": "Calefaccionada solar"
+            },
+            {
+                "titulo": "Tv",
+                "descripcion": "Smart/DirecTV"
+            },
+            {
+                "titulo": "Aireación",
+                "descripcion": "Ventiladores y aireacondicionado con ficha"
+            },
+            {
+                "titulo": "Calefacción",
+                "descripcion": "Calefactores"
+            },
+            {
+                "titulo": "Pet Friendly",
+                "descripcion": "Mascotas pequeñas"
+            }
+        ],
+        "images": [
+            "/cabaña4personas/0.jpg", "/cabaña4personas/1.jpg", "/cabaña4personas/2.jpg", "/cabaña4personas/3.jpg", 
+            "/cabaña4personas/4.jpg", "/cabaña4personas/5.jpg"
+        ]
+    }
+]

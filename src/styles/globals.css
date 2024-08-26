@@ -1,0 +1,96 @@
+@import 'leaflet/dist/leaflet.css';
+
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #fdeddd6e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+.section.in-view {
+    /* Cambios visuales o animaciones cuando la sección está en vista */
+    background-color: rgba(255, 255, 255, 0); /* Ejemplo de cambio de color */
+}
+
+#section1, #section2 {
+    transition: background-color 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+
+@keyframes animate-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      50% {
+        transform: translateX(20%);
+        opacity: 1;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+}
+
+@keyframes animate-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(-20%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-second-section-left {
+    animation: animate-left 2s forwards;
+    transition: opacity 0.5s ease-out;
+}
+
+.animate-second-section-right {
+    animation: animate-right 2s forwards;
+    transition: opacity 0.5s ease-out;
+}
+
+
+
+
+/* SCROLL BAR */
+
+@media (max-width: 30em) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+}
+  
+::-webkit-scrollbar {
+    margin-top: 5px;
+    width: 2px;
+    height: 10px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-thumb {
+    border: 0 none #ffffff;
+    border-radius: 50px;
+    background: #312713;
+    max-width: 60px;
+    height: 10rem;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #312713;
+    cursor: pointer;
+}
+  
