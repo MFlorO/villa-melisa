@@ -5,7 +5,7 @@ import emailjs from "@emailjs/browser";
 import { NEXT_PUBLIC_EMAILJS_PUBLIC_KEY, NEXT_PUBLIC_SERVICE_ID, NEXT_PUBLIC_TEMPLATE_ID } from "../../../env";
 import { useForm } from "react-hook-form";
 import InputForm from "./InputForm";
-import { Alert, AlertIcon, Button, Flex, Text } from "@chakra-ui/react";
+import { Alert, AlertIcon, Button, Flex, InputGroup, Text, Textarea } from "@chakra-ui/react";
 import Link from "next/link";
 
 type SubscriptionResult = {
@@ -32,7 +32,7 @@ const FormContact = () => {
         return
       }
 
-      //* 3.Crear el objeto que `emailjs.send` espera recibir.
+      //* 3.Crear el objeto que `emailjs` espera recibir.
       const templateParams = {
         user_name: values.user_name,
         user_email: values.user_email,
@@ -99,12 +99,23 @@ const FormContact = () => {
                 })}
               />
 
-              <InputForm id='message' type='text' label='Consulta' errors={errors} 
-                register={register('message', {
-                  required: "Este campo es obligatorio",
-                  minLength: { value: 10, message: 'La consulta debe contener más de 10 caracteres' }
-                })}
-              />
+              <Flex w="100%" direction="column">
+                <InputGroup>
+                  <Textarea id='message' w="100%" h={{ base: "70px", sm: "100px" }} placeholder='Consulta' variant="outline"
+                    color="black" fontSize={{ base: "11px", sm: "15px" }} resize="vertical"                    
+                    {
+                      ...register('message', {
+                      required: "Este campo es obligatorio",
+                      minLength: { value: 10, message: 'La consulta debe contener más de 10 caracteres' }
+                      })
+                    }
+                    errorBorderColor="red"
+                  />
+                </InputGroup>
+                <Flex color="red" fontFamily="Montserrat" fontSize={{ base: "12px", sm: "14px" }} mt="3px">
+                  {typeof errors["message"]?.message === "string" && errors["message"].message}
+                </Flex>
+              </Flex>
 
               {/* MENSAJES DE ALERTA */}
               {subscriptionResult && (

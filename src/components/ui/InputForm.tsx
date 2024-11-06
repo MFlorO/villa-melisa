@@ -1,4 +1,4 @@
-import { Flex, FormLabel, Input, InputGroup } from "@chakra-ui/react"
+import { Flex, Input, InputGroup } from "@chakra-ui/react"
 
 interface Props {
   label: string,
